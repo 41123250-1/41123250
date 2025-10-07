@@ -12,3 +12,25 @@
 <p style="padding-left: 60px;">w18: 課程總結</p>
 <p style="padding-left: 30px;"><span style="background-color: #ffff00;">個人與分組網站維護 (40%)</span> - 每週至少兩次推送與課程進度相關的學習內容與心得。</p>
 <p style="padding-left: 60px;">w9 期中自評、w18 期末自評</p>
+<h1>HW5</h1>
+<p>使用Webot模擬場景，建立一個類似棋盤的場地加上三個木頭箱子與一個E-puck機器人，用python程式語法建立一個控制器控制機器人，成功讓機器人自己運作。</p>
+<p>python程式:</p>
+<div class="line number1 index0 alt2"><code class="py keyword">from</code> <code class="py plain">controller </code><code class="py keyword">import</code> <code class="py plain">Robot, Motor  </code><code class="py comments"># 從 controller 模組導入 Robot 和 Motor 類別</code></div>
+<div class="line number2 index1 alt1"> </div>
+<div class="line number3 index2 alt2"><code class="py plain">TIME_STEP </code><code class="py keyword">=</code> <code class="py value">64</code>  <code class="py comments"># 設置時間步長為 64 毫秒</code></div>
+<div class="line number4 index3 alt1"> </div>
+<div class="line number5 index4 alt2"><code class="py comments"># 創建 Robot 實例</code></div>
+<div class="line number6 index5 alt1"><code class="py plain">robot </code><code class="py keyword">=</code> <code class="py plain">Robot()</code></div>
+<div class="line number7 index6 alt2"> </div>
+<div class="line number8 index7 alt1"><code class="py comments"># 擷取電機設備</code></div>
+<div class="line number9 index8 alt2"><code class="py plain">leftMotor </code><code class="py keyword">=</code> <code class="py plain">robot.getDevice(</code><code class="py string">'left wheel motor'</code><code class="py plain">)  </code><code class="py comments"># 獲取左側輪子電機設備</code></div>
+<div class="line number10 index9 alt1"><code class="py plain">rightMotor </code><code class="py keyword">=</code> <code class="py plain">robot.getDevice(</code><code class="py string">'right wheel motor'</code><code class="py plain">)  </code><code class="py comments"># 獲取右側輪子電機設備</code></div>
+<div class="line number11 index10 alt2"> </div>
+<div class="line number12 index11 alt1"><code class="py comments"># 設置電機的目標位置</code></div>
+<div class="line number13 index12 alt2"><code class="py plain">leftMotor.setPosition(</code><code class="py value">10.0</code><code class="py plain">)  </code><code class="py comments"># 設置左側輪子電機的目標位置為 10.0</code></div>
+<div class="line number14 index13 alt1"><code class="py plain">rightMotor.setPosition(</code><code class="py value">10.0</code><code class="py plain">)  </code><code class="py comments"># 設置右側輪子電機的目標位置為 10.0</code></div>
+<div class="line number15 index14 alt2"> </div>
+<div class="line number16 index15 alt1"><code class="py keyword">while</code> <code class="py plain">robot.step(TIME_STEP) !</code><code class="py keyword">=</code> <code class="py keyword">-</code><code class="py value">1</code><code class="py plain">:  </code><code class="py comments"># 當機器人步進時間步長不等於 -1 時（模擬仍在運行）</code></div>
+<div class="line number17 index16 alt2"><code class="py spaces">    </code><code class="py keyword">pass</code>  <code class="py comments"># 什麼也不做，保持循環運行</code></div>
+<div class="line number17 index16 alt2"><code class="py comments"></code></div>
+<div class="line number17 index16 alt2"><img alt="" height="427" src="/images/螢幕擷取畫面 2025-10-07 105900.png" width="800"/></div>
